@@ -1,9 +1,11 @@
-set -gx GOPATH "$HOME/go"
-set -gx PATH $PATH $GOPATH/bin
+# ====== functions ========================================
 
-set -gx PATH "$HOME/.cargo/bin" $PATH
-set -gx PATH "/usr/local/go/bin" $PATH
-set -gx PATH "$HOME/.local/bin/julia-1.7.2/bin" $PATH
+function refish --description "Reload fish config"
+    source ~/.config/fish/config.fish
+    echo "Reloaded fish config!"
+end
+
+# ====== misc =============================================
 
 if command -qv exa
     alias l=exa
@@ -15,6 +17,5 @@ end
 
 alias notes='vi ~/.notes'
 
-alias vi=nvim
-alias vim=nvim
+
 
