@@ -1,3 +1,8 @@
+
+# ====== path =============================================
+
+set PATH ~/.fnm $PATH
+
 # ====== functions ========================================
 
 function refish --description "Reload fish config"
@@ -6,6 +11,10 @@ function refish --description "Reload fish config"
 end
 
 # ====== misc =============================================
+
+if command -qv fnm
+    fnm env | source
+end
 
 if command -qv exa
     alias l=exa
