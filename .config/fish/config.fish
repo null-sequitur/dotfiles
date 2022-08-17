@@ -12,6 +12,10 @@ end
 
 # ====== misc =============================================
 
+if status is-interactive && command -qv tmux && not set -q TMUX
+    exec tmux
+end
+
 if command -qv fnm
     fnm env | source
 end
