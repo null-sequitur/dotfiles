@@ -2,6 +2,7 @@
 # ====== path =============================================
 
 set PATH ~/.fnm $PATH
+set PATH ~/.local/bin $PATH
 
 # ====== functions ========================================
 
@@ -33,6 +34,7 @@ if command -qv exa
     alias l=exa
     alias ll='exa -l --icons'
     alias la='exa -la --icons'
+    alias lg='exa -la --git --icons'
 else
     alias l=ls
 end
